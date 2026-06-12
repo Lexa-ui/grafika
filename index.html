@@ -91,17 +91,62 @@ footer{background:var(--beige-d);padding:2.5rem 4rem;border-top:1px solid var(--
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:900px){
-  .top-bar{font-size:.58rem;padding:.5rem 1rem;gap:1rem}
-  nav{padding:.5rem 1.5rem}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .page-header{padding:6rem 1.5rem 3.5rem}
-  .sec{padding:4rem 1.5rem}
-  footer{padding:2rem 1.5rem}
-  .footer-in{flex-direction:column;text-align:center}
-  .footer-bot{padding:.65rem 1.5rem}
-  .footer-bot-in{flex-direction:column;gap:.6rem;text-align:center}
-  .cookie{padding:12px 1.5rem;flex-direction:column;align-items:flex-start}
+  /* HERO - kép felül, szöveg alul */
+  #hero{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    background:none!important
+  }
+  .hero-img{
+    position:relative!important;
+    width:100%!important;
+    height:60vw!important;
+    min-height:240px!important;
+    max-height:360px!important;
+    overflow:hidden!important
+  }
+  .hero-img img{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:50% 20%!important
+  }
+  .hero-img::after{display:none!important}
+  .hero-ov{display:none!important}
+  .hero-left{
+    background:var(--beige-l)!important;
+    padding:2rem 1.5rem!important;
+    position:static!important;
+    width:100%!important;
+    max-width:100%!important
+  }
+  .hero-h1{font-size:2.4rem!important;color:var(--dark)!important}
+  .hero-h1 em{color:var(--gold-d)!important}
+  .hero-ey{color:var(--gold-d)!important}
+  .hero-desc{color:var(--mid)!important}
+  .hero-desc strong{color:var(--dark)!important;font-weight:700!important}
+  .hero-bot{margin-top:1.5rem}
+  /* NAV */
+  .nav-links{display:none!important}
+  .hamburger{display:flex!important}
+  /* FEATURES */
+  .features{grid-template-columns:1fr 1fr!important}
+  .feat{padding:1.2rem 1rem!important}
+  /* EGYÉB */
+  nav{padding:.5rem 1.5rem!important}
+  .top-bar{font-size:.58rem!important;padding:.5rem 1rem!important;gap:1rem!important}
+  .sec{padding:4rem 1.5rem!important}
+  footer{padding:2rem 1.5rem!important}
+  .footer-in{flex-direction:column!important;text-align:center!important}
+  .footer-bot{padding:.65rem 1.5rem!important}
+  .footer-bot-in{flex-direction:column!important;gap:.6rem!important;text-align:center!important}
+  .cookie{padding:12px 1.5rem!important;flex-direction:column!important;align-items:flex-start!important}
+  .svc-wrap{grid-template-columns:1fr!important}
+  .svc-cards{grid-template-columns:1fr 1fr!important}
+  .cta-sec{padding:3.5rem 1.5rem!important}
 }
 #hero{position:relative;height:calc(100vh - 96px);min-height:520px;max-height:760px;overflow:hidden;display:flex;align-items:center}
 .hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 4rem 0 5rem;max-width:620px}
