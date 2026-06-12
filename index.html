@@ -91,16 +91,16 @@ footer{background:var(--beige-d);padding:2.5rem 4rem;border-top:1px solid var(--
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:900px){
-  #hero{height:auto;min-height:100svh;display:flex;align-items:center}
-  .hero-img img{width:70%!important;height:100%!important;object-fit:cover!important;object-position:20% center!important;position:absolute!important;right:0!important;top:0!important}
-  .hero-img>div:nth-child(2){background:linear-gradient(to right,var(--beige-l) 12%,rgba(240,235,225,.9) 25%,rgba(240,235,225,.5) 40%,rgba(240,235,225,.1) 55%,transparent 65%)!important}
-  .hero-left{max-width:75%;padding:2rem 1.5rem}
-
-  .hero-left{position:relative;z-index:3;padding:0 1.5rem}
+  #hero{flex-direction:column;height:auto;min-height:0}
+  .hero-img{position:relative!important;width:100%;height:55vw;min-height:260px;max-height:340px;flex-shrink:0}
+  .hero-img img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 20%!important}
+  .hero-img>div{display:none!important}
+  .hero-ov{display:none!important}
+  .hero-left{position:relative!important;z-index:1!important;padding:2.5rem 1.5rem!important;background:var(--beige-l);width:100%}
+  .hero-bot{margin-top:1.5rem}
   .hero-img>div{background:linear-gradient(to bottom,rgba(15,15,15,.0) 0%,rgba(15,15,15,.55) 40%,rgba(15,15,15,.7) 100%)!important}
   .hero-left{background:none}
   .hero-desc strong{color:var(--white)!important}
-  .hero-left{padding:0 1.5rem}
   
   .hero-img img{width:100%;height:100%;object-fit:cover;object-position:65% center;position:absolute;right:0;top:0}
   .hero-img>div{background:linear-gradient(to right,rgba(15,15,15,.55) 0%,rgba(15,15,15,.2) 45%,transparent 70%) 0%,rgba(240,235,225,.55) 55%,transparent 100%)!important}
@@ -169,7 +169,6 @@ footer{background:var(--beige-d);padding:2.5rem 4rem;border-top:1px solid var(--
   
   .hero-img{position:absolute;inset:0;z-index:0;overflow:hidden}
   .hero-ov{display:none}
-  .hero-left{padding:3rem 1.5rem;text-align:center;align-items:center;max-width:100%;background:var(--beige-l)}
   .hero-bot{display:none}
   .features{grid-template-columns:1fr 1fr}
   .svc-wrap{grid-template-columns:1fr;gap:2.5rem}
